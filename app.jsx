@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-
-const jsx = <span>Namaste react using jsx</span>
+const jsx = <span>this is jsx</span>;
 const jsxHeading = (<h1 className="head">
     {jsx}
-    
     Namaste react using jsx
 </h1>
 
