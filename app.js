@@ -1,12 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// const heading=React.createElement('h2',{id:'heading'}, "hello world in react!")
-// console.log(heading)
-// const root= ReactDOM.createRoot(document.getElementById('root'))
-// const y= root.render(heading)
-const heading = React.createElement('div', { id: 'heading' }, [React.createElement('div', { id: 'heading2' },
-    React.createElement('h2', {}, 'This is headache')),
-React.createElement('div', { id: 'heading3' },
-    React.createElement('h2', {}, 'not anymore, issues resolved'))])
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(heading)
+
+
+const jsx = <span>Namaste react using jsx</span>
+const jsxHeading = (<h1 className="head">
+    {jsx}
+    
+    Namaste react using jsx
+</h1>
+
+);
+
+const Title = () => <h1 id="Title">This is Title component</h1>;
+const HeadingComponent = () => (
+  <div className="headingComponent">
+    {jsxHeading}
+    <Title />
+     <h2>{100*2}</h2>
+    
+    {<h3>Normal js function returns some jsx code/read element</h3>}
+
+    <h1>This is Heading Component</h1>
+  </div>
+);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(jsxHeading);
+  
+root.render(<HeadingComponent />);
+console.log(jsxHeading);
